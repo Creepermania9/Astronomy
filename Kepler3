@@ -2,8 +2,10 @@ import cs1.Keyboard;
 import java.lang.Math;
 class Kepler3
 {
-  final private double G = 6.67 * Math.pow(10,-11);
-  double private mass, distance, period;
+	public Kepler3(){
+  		final private double G = 6.67 * Math.pow(10,-11);
+		double private mass, distance, period;
+	}
 	public void period ()
 	{
 		System.out.print("Enter the mass of the central object: ");
@@ -15,11 +17,11 @@ class Kepler3
 	}
 	public void distance ()
 	{
-	  System.out.print("Enter the mass of the central object: ");
-	  mass = Keyboard.readDouble();
-	  System.out.print("Enter the period in solar years: ");
-	  period = Keyboard.readDouble();
-	  distance = Math.pow(Math.pow(period,2)*G*mass/4/Math.PI/Math.PI,1/3);
-	  System.out.print("The distance(in AU) is "+distance);
+	  	System.out.print("Enter the mass of the central object: ");
+	  	mass = Keyboard.readDouble();
+		System.out.print("Enter the period in solar years: ");
+	  	period = Keyboard.readDouble();
+	  	distance = Math.pow(Math.pow(period,2)*G*mass/4/Math.PI/Math.PI,1/3);
+	  	System.out.print("The distance(in AU) is "+distance);
 	}
 }
