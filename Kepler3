@@ -6,7 +6,7 @@ class Kepler3
   		final private double G = 6.67 * Math.pow(10,-11);
 		double private mass, distance, period;
 	}
-	public void period ()
+	public void Period ()
 	{
 		System.out.print("Enter the mass of the central object: ");
 		mass = Keyboard.readDouble()
@@ -15,7 +15,7 @@ class Kepler3
 		period = Math.sqrt(4*Math.PI*Math.PI/G/mass*Math.pow(distance,3);
 		System.out.println("The period(in solar years) is: "+period);
 	}
-	public void distance ()
+	public void Distance ()
 	{
 	  	System.out.print("Enter the mass of the central object: ");
 	  	mass = Keyboard.readDouble();
