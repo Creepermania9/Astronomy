@@ -2,10 +2,11 @@ import cs1.Keyboard;
 import java.lang.Math;
 class BinarySystem
 {
+	double private mass, distance, period, massOther;
+	final private double G;
     public BinarySystem()
     {
-        final private double G = 6.67 * Math.pow(10,-11);
-        double private mass, distance, period, massOther;
+    G = 6.67 * Math.pow(10,-11);
     }
     public void Mass ()
 	{
