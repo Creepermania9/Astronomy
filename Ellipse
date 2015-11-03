@@ -15,7 +15,7 @@ class Ellipse
         case = Keyboard.readInt();
         switch(case) 
         {
-            case 1: /Semi-major axis
+            case 1: //Semi-major axis
             System.out.println("Enter the length of the semi-minor axis: ")
             minor = Keyboard.readDouble();
             break;
