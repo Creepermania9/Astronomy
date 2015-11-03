@@ -2,9 +2,10 @@ import cs1.Keyboard;
 import java.lang.Math;
 class Kepler3
 {
+	double private mass, distance, period;
+	final private double G;
 	public Kepler3(){
-  		final private double G = 6.67 * Math.pow(10,-11);
-		double private mass, distance, period;
+  	G = 6.67 * Math.pow(10,-11);
 	}
 	public void Period ()
 	{
