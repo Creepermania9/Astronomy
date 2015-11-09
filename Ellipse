@@ -17,18 +17,34 @@ class Ellipse
         switch(case) 
         {
             case 1: //Semi-major axis
-            System.out.println("Enter the length of the semi-minor axis: ")
-            minor = Keyboard.readDouble();
-            System.out.println("Enter the ecentricity: ");
-            eccentricity = Keyboard.readDouble();
-            System.out.println("Enter the length between the foci");
-            foci_length = Keyboard.readDouble();
+                System.out.println("Enter the length of the semi-minor axis: ")
+                minor = Keyboard.readDouble();
+                System.out.println("Enter the ecentricity: ");
+                eccentricity = Keyboard.readDouble();
+                System.out.println("Enter the length between the foci");
+                foci_length = Keyboard.readDouble();
+                if(minor == 0)
+                {
+                    major = (foci_length / 2) / eccentricity;
+                }
+                if(eccentricity == 0)
+                {
+                    `major = Math.sqrt(Math.pow(foci_length/2,2)+Math.pow(minor,2));
+                }
+                if(foci_length == 0)
+                {
+                    major = Math.sqrt(Math.pow(minor,2)/(1-eccentricity^2));
+                }
+                System.out.println("The semi-major axis is " + major);
             break;
             case 2: //Semi-minor axis
             break;
             case 3: //Eccentricity
             break;
             case 4: //Length between foci
+            break;
+            default: //Error Case
+                System.out.println("That is not a valid choice.");
             break;
         }
     }
