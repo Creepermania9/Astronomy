@@ -60,6 +60,27 @@ class Ellipse
                 System.out.println("The semi-major axis is " + minor);
             break;
             case 3: //Eccentricity
+                System.out.println("Enter the length of the semi-major axis: ");
+                major = Keyboard.readDouble();
+                System.out.println("Enter the length of the semi-minor axis: ");
+                minor = Keyboard.readDouble();
+                System.out.println("Enter the length between the foci");
+                foci_length = Keyboard.readDouble();
+                if(major == 0)
+                {
+                    major = Math.sqrt(Math.pow(minor,2)+Math.pow(foci_length/2,2));
+                    eccentricity = (foci_length/2)/major;
+                }
+                if(minor == 0)
+                {
+                    eccentricity = (foci_length/2)/major;
+                }
+                if(foci_length == 0)
+                {
+                    foci_length = Math.sqrt(Math.pow(minor,2)+Math.pow(minor/2,2))*2;
+                    eccentricity = (foci_length/2)/major;
+                }
+                System.out.println("The semi-major axis is " + eccentricity);
             break;
             case 4: //Length between foci
             break;
