@@ -29,7 +29,7 @@ class Ellipse
                 }
                 if(eccentricity == 0)
                 {
-                    `major = Math.sqrt(Math.pow(foci_length/2,2)+Math.pow(minor,2));
+                    major = Math.sqrt(Math.pow(foci_length/2,2)+Math.pow(minor,2));
                 }
                 if(foci_length == 0)
                 {
@@ -38,6 +38,26 @@ class Ellipse
                 System.out.println("The semi-major axis is " + major);
             break;
             case 2: //Semi-minor axis
+                System.out.println("Enter the length of the semi-major axis: ");
+                major = Keyboard.readDouble();
+                System.out.println("Enter the ecentricity: ");
+                eccentricity = Keyboard.readDouble();
+                System.out.println("Enter the length between the foci");
+                foci_length = Keyboard.readDouble();
+                if(major == 0)
+                {
+                    major = foci_length / 2 / eccentricity);
+                    minor = Math.sqrt(Math.pow(major,2)-Math.pow(foci_length/2,2));
+                }
+                if(eccentricity == 0)
+                {
+                    minor = Math.sqrt(Math.pow(major,2)-Math.pow(foci_length/2,2));
+                }
+                if(foci_length == 0)
+                {
+                    minor = Math.sqrt((1-Math.pow(eccentricity,2))*Math.pow(major,2));
+                }
+                System.out.println("The semi-major axis is " + minor);
             break;
             case 3: //Eccentricity
             break;
