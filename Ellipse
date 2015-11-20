@@ -1,23 +1,25 @@
+package Functions;
+
 import cs1.Keyboard;
 import java.lang.Math;
 
 class Ellipse
 {
     private double major, minor, eccentricity, foci_length; //major and minor are the radius not full length
-    private int case;
+    private int case1;
     public Ellipse()
     {
     }
     public void calculate()
     {
-        System.out.println("What would you like to calculate?")
+        System.out.println("What would you like to calculate?");
         System.out.println("1)Semi-major axis \n 2)Semi-minor axis \n 3) Eccentricity \n 4) Length between foci");
-        case = Keyboard.readInt();
+        case1 = Keyboard.readInt();
         System.out.println("Enter 0 for those not given.");
-        switch(case) 
+        switch(case1) 
         {
             case 1: //Semi-major axis
-                System.out.println("Enter the length of the semi-minor axis: ")
+                System.out.println("Enter the length of the semi-minor axis: ");
                 minor = Keyboard.readDouble();
                 System.out.println("Enter the ecentricity: ");
                 eccentricity = Keyboard.readDouble();
@@ -33,7 +35,7 @@ class Ellipse
                 }
                 if(foci_length == 0)
                 {
-                    major = Math.sqrt(Math.pow(minor,2)/(1-eccentricity^2));
+                    major = Math.sqrt(Math.pow(minor,2)/(1-Math.pow(eccentricity, 2)));
                 }
                 System.out.println("The semi-major axis is " + major);
             break;
@@ -46,7 +48,7 @@ class Ellipse
                 foci_length = Keyboard.readDouble();
                 if(major == 0)
                 {
-                    major = foci_length / 2 / eccentricity);
+                    major = foci_length / 2 / eccentricity;
                     minor = Math.sqrt(Math.pow(major,2)-Math.pow(foci_length/2,2));
                 }
                 if(eccentricity == 0)
